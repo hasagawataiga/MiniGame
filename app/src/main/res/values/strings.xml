@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">L10_Hoang_52840_Game2</string>
+    <string name="MINI_GAME">MINI GAME</string>
+    <string name="Copyright">Copyright by Tuan Hoang</string>
+    <string name="Name">Name</string>
+    <string name="Result">Result</string>
+    <string name="Score">Score</string>
+    <string name="Play">PLAY</string>
+    <string name="Number">Number</string>
+    <string name="Tutorial">Pick the biggest number</string>
+    <string name="Start">START</string>
+    <string name="Game2">GAME2</string>
+    <string name="TutorialGame2">Arrange those letters into a meaning word</string>
+    <string name="AnswerSpace">Your answer</string>
+    <string name="Letter">LETTER</string>
+    <string name="Game1">GAME1</string>
+    <string name="Check">CHECK</string>
+    <string name="ZeroValue">0</string>
+</resources>
