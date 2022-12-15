@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.util.Objects;
-
 public class MainActivity extends AppCompatActivity {
     EditText et_playerName;
     TextView tv_scoreGame1;
@@ -24,28 +22,15 @@ public class MainActivity extends AppCompatActivity {
         tv_scoreGame2 = findViewById(R.id.tv_score3);
         et_playerName = findViewById(R.id.et_name);
         Bundle bundle = getIntent().getExtras();
-        String playerName = bundle.getString(ConstantVariables.PLAYER_NAME);
-        et_playerName.setText(playerName);
-        try{
-            String tmp1 = bundle.getString(ConstantVariables.SCORE_GAME1);
-            if(!Objects.equals(tmp1, "")){
-                score1 = tmp1;
-                tv_scoreGame1.setText(score1);
-            }else{
-                tv_scoreGame1.setText("0");
-            }
-        }catch (Exception e){
+        if(bundle != null){
+            score1 = bundle.getString(ConstantVariables.SCORE_GAME1);
+            score2 = bundle.getString(ConstantVariables.SCORE_GAME2);
+            String playerName = bundle.getString(ConstantVariables.PLAYER_NAME);
+            et_playerName.setText(playerName);
+            tv_scoreGame1.setText(score1);
+            tv_scoreGame2.setText(score2);
+        }else{
             tv_scoreGame1.setText("0");
-        }
-        try{
-            String tmp2 = bundle.getString(ConstantVariables.SCORE_GAME2);
-            if(!Objects.equals(tmp2, "")){
-                score2 = tmp2;
-                tv_scoreGame2.setText(score2);
-            }else{
-                tv_scoreGame2.setText("0");
-            }
-        }catch(Exception e){
             tv_scoreGame2.setText("0");
         }
     }
